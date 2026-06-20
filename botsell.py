@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 BOT_TOKEN = os.environ.get('BOT_TOKEN', '8237500612:AAEoiekB1GMvBl6-BgFrRTR5-qwaEhZamNo')
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
-ADMIN_ID = "7448858888"
+ADMIN_ID = "8565708186"
 REPO_OWNER = "abkay400-sys"
 REPO_NAME = "gold"
 SUCCESS_CODE = asyncio.Queue()
@@ -1022,6 +1022,7 @@ async def start_polling():
             backoff = min(backoff * 2, 60)
 
 async def main():
+    print("Bot is starting up...", flush=True)
     global session, _connector
     timeout = aiohttp.ClientTimeout(total=30)
     _connector = aiohttp.TCPConnector(
